@@ -35,16 +35,6 @@ export const isNumberRange = (min: number, max: number) => {
       min,
       max,
     },
-    _sqlite: {
-      type: "real",
-      min,
-      max,
-    },
-    _postgres: {
-      type: "numeric",
-      min,
-      max,
-    },
   };
 
   return fn;

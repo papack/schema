@@ -11,6 +11,4 @@ isNumber.empty = 0;
 isNumber.meta = {
   _js: { type: "number" },
   _form: { tag: "input", type: "number" },
-  _sqlite: { type: "real" },
-  _postgres: { type: "numeric" },
 };

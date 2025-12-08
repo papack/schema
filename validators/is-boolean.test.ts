@@ -28,8 +28,6 @@ describe("isBoolean", () => {
       expect(isBoolean.meta).toEqual({
         _js: { type: "boolean" },
         _form: { tag: "checkbox" },
-        _sqlite: { type: "integer" },
-        _postgres: { type: "boolean" },
       });
     });
   });

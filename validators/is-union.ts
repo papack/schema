@@ -39,14 +39,6 @@ export const isUnion = <const Values extends readonly (string | number)[]>(
       tag: "select",
       options: values.map((v) => ({ value: v, label: String(v) })),
     },
-    _sqlite: {
-      type: "text",
-      enum: values,
-    },
-    _postgres: {
-      type: "text",
-      enum: values,
-    },
   };
 
   return fn;

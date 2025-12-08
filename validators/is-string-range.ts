@@ -46,19 +46,6 @@ export const isStringRange = (config: {
       minLength,
       maxLength,
     },
-    _sqlite: {
-      type: "text",
-      minLength,
-      maxLength,
-    },
-    _postgres: {
-      type:
-        minLength === maxLength
-          ? `char(${maxLength})`
-          : `varchar(${maxLength})`,
-      minLength,
-      maxLength,
-    },
   };
 
   return fn;

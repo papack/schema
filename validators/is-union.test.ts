@@ -65,14 +65,6 @@ describe("isUnion", () => {
             { value: 3, label: "3" },
           ],
         },
-        _sqlite: {
-          type: "text",
-          enum: [1, 2, 3],
-        },
-        _postgres: {
-          type: "text",
-          enum: [1, 2, 3],
-        },
       });
     });
   });
@@ -90,14 +82,6 @@ describe("isUnion", () => {
             { value: "b", label: "b" },
             { value: "c", label: "c" },
           ],
-        },
-        _sqlite: {
-          type: "text",
-          enum: ["a", "b", "c"],
-        },
-        _postgres: {
-          type: "text",
-          enum: ["a", "b", "c"],
         },
       });
     });

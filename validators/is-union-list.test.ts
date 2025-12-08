@@ -83,14 +83,6 @@ describe("isUnionList", () => {
           ],
           allowEmpty: true,
         },
-        _sqlite: {
-          type: "json",
-          enum: [1, 2, 3],
-        },
-        _postgres: {
-          type: "jsonb",
-          enum: [1, 2, 3],
-        },
       });
     });
   });
@@ -112,14 +104,6 @@ describe("isUnionList", () => {
             { value: "c", label: "c" },
           ],
           allowEmpty: false,
-        },
-        _sqlite: {
-          type: "json",
-          enum: ["a", "b", "c"],
-        },
-        _postgres: {
-          type: "jsonb",
-          enum: ["a", "b", "c"],
         },
       });
     });

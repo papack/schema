@@ -11,6 +11,4 @@ isBoolean.empty = false;
 isBoolean.meta = {
   _js: { type: "boolean" },
   _form: { tag: "checkbox" },
-  _sqlite: { type: "integer" },
-  _postgres: { type: "boolean" },
 };

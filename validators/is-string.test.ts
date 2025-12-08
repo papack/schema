@@ -29,8 +29,6 @@ describe("isString", () => {
       expect(isString.meta).toEqual({
         _js: { type: "string" },
         _form: { tag: "input", type: "text" },
-        _sqlite: { type: "text" },
-        _postgres: { type: "text" },
       });
     });
   });

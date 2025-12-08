@@ -88,16 +88,6 @@ describe("isStringRange", () => {
           minLength: 2,
           maxLength: 5,
         },
-        _sqlite: {
-          type: "text",
-          minLength: 2,
-          maxLength: 5,
-        },
-        _postgres: {
-          type: "varchar(5)",
-          minLength: 2,
-          maxLength: 5,
-        },
       });
     });
   });

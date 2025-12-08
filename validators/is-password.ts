@@ -47,12 +47,6 @@ export const isPassword = (config: {
       minNumbers,
       minSpecialChars,
     },
-    _sqlite: {
-      type: "text",
-    },
-    _postgres: {
-      type: "text",
-    },
   };
 
   return fn;

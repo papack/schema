@@ -74,8 +74,6 @@ describe("isNumberRange", () => {
       expect(fn.meta).toEqual({
         _js: { type: "number", min: 5, max: 10 },
         _form: { tag: "select", type: "number", min: 5, max: 10 },
-        _sqlite: { type: "real", min: 5, max: 10 },
-        _postgres: { type: "numeric", min: 5, max: 10 },
       });
     });
   });

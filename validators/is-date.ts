@@ -16,6 +16,4 @@ isDate.empty = "";
 isDate.meta = {
   _js: { type: "string", format: "date" },
   _form: { tag: "input", type: "date" },
-  _sqlite: { type: "text" },
-  _postgres: { type: "timestamptz" },
 };

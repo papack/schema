@@ -53,14 +53,6 @@ export const isUnionList = <const Values extends readonly (string | number)[]>(
       options: values.map((v) => ({ value: v, label: String(v) })),
       allowEmpty: config.allowEmpty,
     },
-    _sqlite: {
-      type: "json",
-      enum: values,
-    },
-    _postgres: {
-      type: "jsonb",
-      enum: values,
-    },
   };
 
   return fn;

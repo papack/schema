@@ -62,8 +62,6 @@ describe("isMail", () => {
       expect(isMail.meta).toEqual({
         _js: { type: "string" },
         _form: { tag: "input", type: "email" },
-        _sqlite: { type: "text" },
-        _postgres: { type: "text" },
       });
     });
   });

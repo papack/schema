@@ -2,7 +2,7 @@ import { defineConfig } from "tsdown";
 
 export default defineConfig([
   {
-    entry: ["./core/index.ts", "./validators/index.ts"],
+    entry: ["./index.ts"],
     format: "esm",
     outDir: "dist",
     minify: true,
@@ -11,7 +11,7 @@ export default defineConfig([
     },
   },
   {
-    entry: ["./core/index.ts", "./validators/index.ts"],
+    entry: ["./index.ts"],
     format: "cjs",
     outDir: "dist",
     minify: true,
