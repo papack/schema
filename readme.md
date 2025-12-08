@@ -13,9 +13,7 @@ No nulls. No undefined. No async. No partial optionality.
   - lists: `[]`
 - **Only `validate()`** — no `parse`, no `safeParse`.
 - **Strong typing** — `Infer<T>` extracts exact static types.
-- **Database metadata** — `pk`, `fk`, `idx` attach invisible DB fields.  
-  `fk` always defines cascades.
-- **Describe** — inspect schema for DB generators, UI forms, etc.
+- **Describe** — inspect schema for UI forms, etc.
 - **Checks** — curried, functional; includes `char(n)`, `isPassword`, `isIban`, etc.
 - **Union checks** — support primitive unions, never object unions.
 
@@ -48,42 +46,12 @@ UserSchema.validate({ name: "Max" });
 
 ---
 
-## PK, Index, FK
-
-```ts
-import { object, value, pk, fk, idx, isString, Infer } from "@papack/schema";
-
-const UserSchema = object({
-  name: value(
-    idx(pk(isString), {
-      fields: ["name"],
-      order: ["asc"],
-      unique: true,
-    })
-  ),
-
-  gender: value(
-    fk(isString, {
-      table: "gender",
-      onDelete: "cascade",
-      onUpdate: "cascade",
-    })
-  ),
-});
-
-type User = Infer<typeof UserSchema>;
-UserSchema.validate({ name: "Anna", gender: "w" });
-```
-
 ## Complete example
 
 ```ts
 import {
   value,
   object,
-  pk,
-  fk,
-  idx,
   partial,
   pick,
   omit,
@@ -151,7 +119,6 @@ d.validate(u);
 ```ts
 const info = UserSchema.describe();
 // Structural metadata for:
-// - DB schema generation
 // - UI form builders
 // - tools, automation, codegen
 ```
