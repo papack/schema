@@ -76,12 +76,6 @@ describe("isPassword", () => {
           minNumbers: 2,
           minSpecialChars: 1,
         },
-        _sqlite: {
-          type: "text",
-        },
-        _postgres: {
-          type: "text",
-        },
       });
     });
   });
