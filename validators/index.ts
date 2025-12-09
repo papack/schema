@@ -1,4 +1,6 @@
 export * from "./is-boolean";
+export * from "./is-date-or-empty-string";
+export * from "./is-date-string";
 export * from "./is-mail";
 export * from "./is-number-range";
 export * from "./is-number";
