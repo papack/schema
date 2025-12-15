@@ -64,13 +64,7 @@ import {
 } from "@papack/schema";
 
 const UserSchema = object({
-  name: value(
-    idx(pk(isString), {
-      fields: ["name"],
-      order: ["asc"],
-      unique: true,
-    })
-  ),
+  name: value(isString)
 
   pw: value(
     isPassword({
@@ -80,13 +74,7 @@ const UserSchema = object({
     })
   ),
 
-  gender: value(
-    fk(isUnionList(["w", "m"], { allowEmpty: true }), {
-      table: "gender",
-      onDelete: "cascade",
-      onUpdate: "cascade",
-    })
-  ),
+  gender: value(isUnionList(["w", "m"], { allowEmpty: true })),
 });
 
 // Derived schemas
