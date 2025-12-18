@@ -1,6 +1,7 @@
 import { describe, it, expect } from "bun:test";
 import { isUuidv4 } from "./is-uuid-v4";
 import { ValidationError } from "../core/validate";
+import { value } from "../core";
 
 describe("isUuidv4", () => {
   describe("assertion", () => {
@@ -42,7 +43,7 @@ describe("isUuidv4", () => {
 
   describe("empty", () => {
     it("has a valid uuid v4 as empty default", () => {
-      expect(() => isUuidv4(isUuidv4.empty)).not.toThrow();
+      expect(() => isUuidv4(value(isUuidv4).produce())).not.toThrow();
     });
   });
 });

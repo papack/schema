@@ -21,7 +21,13 @@ export const value = <T>(cb: RuntimeCB<T>): ValueNodeInterface<T> => {
   };
 
   const produce = (): T => {
-    return cb.empty as T;
+    const empty = cb.empty;
+
+    if (typeof empty === "function") {
+      return (empty as () => T)();
+    }
+
+    return empty as T;
   };
 
   return { validate, describe, produce };

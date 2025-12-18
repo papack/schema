@@ -20,7 +20,7 @@ export const isDateString = (input: unknown): asserts input is string => {
   }
 };
 
-isDateString.empty = "";
+isDateString.empty = () => new Date().toISOString();
 
 isDateString.meta = {
   _js: { type: "string", format: "date-time" },
