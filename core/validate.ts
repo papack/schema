@@ -6,6 +6,7 @@ export type ValidationErrorCodeType =
   | "NOT_A_MAIL"
   | "NOT_A_NUMBER"
   | "NOT_A_STRING"
+  | "NOT_A_UUID_V4"
   | "NOT_AN_OBJECT"
   | "NOT_IN_UNION"
   | "NUMBER_RANGE_INVALID"

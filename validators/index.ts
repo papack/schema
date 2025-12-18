@@ -9,3 +9,4 @@ export * from "./is-string-range";
 export * from "./is-string";
 export * from "./is-union-list";
 export * from "./is-union";
+export * from "./is-uuid-v4";
