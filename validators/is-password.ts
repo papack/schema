@@ -30,7 +30,6 @@ export const isPassword = (config: {
     }
   };
 
-  // Sinnvolles default: leeres PW → invalid → leerer String
   fn.empty = "";
 
   fn.meta = {

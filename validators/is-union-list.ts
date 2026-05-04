@@ -2,7 +2,7 @@ import { ValidationError } from "../core/validate";
 
 export const isUnionList = <const Values extends readonly (string | number)[]>(
   values: Values,
-  config: { allowEmpty: boolean } = { allowEmpty: true }
+  config: { allowEmpty: boolean } = { allowEmpty: true },
 ) => {
   if (values.length === 0) {
     throw new ValidationError("UNION_EMPTY");

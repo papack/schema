@@ -8,6 +8,7 @@ type RuntimeCB<T> = {
   (input: unknown): asserts input is T;
   meta?: unknown;
   empty?: T;
+  emptyFactory?: () => T;
 };
 
 export const value = <T>(cb: RuntimeCB<T>): ValueNodeInterface<T> => {
@@ -23,8 +24,8 @@ export const value = <T>(cb: RuntimeCB<T>): ValueNodeInterface<T> => {
   const produce = (): T => {
     const empty = cb.empty;
 
-    if (typeof empty === "function") {
-      return empty() as T;
+    if (cb.emptyFactory !== undefined) {
+      return cb.emptyFactory() as T;
     }
 
     return empty as T;

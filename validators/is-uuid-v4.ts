@@ -13,7 +13,8 @@ export const isUuidv4 = (input: unknown): asserts input is string => {
   }
 };
 
-isUuidv4.empty = () => crypto.randomUUID();
+isUuidv4.empty = "";
+isUuidv4.emptyFactory = () => crypto.randomUUID();
 
 isUuidv4.meta = {
   _js: { type: "string", format: "uuid" },
